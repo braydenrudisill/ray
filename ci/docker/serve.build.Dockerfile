@@ -28,7 +28,7 @@ if [[ "${PYTHON-}" != "3.12" ]]; then
     transformers aioboto3
 fi
 
-git clone --branch 4.2.0 https://github.com/wg/wrk.git /tmp/wrk
+git clone --branch=4.2.0 --depth=1 https://github.com/wg/wrk.git /tmp/wrk
 make -C /tmp/wrk -j
 sudo cp /tmp/wrk/wrk /usr/local/bin/wrk
 rm -rf /tmp/wrk

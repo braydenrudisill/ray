@@ -29,7 +29,7 @@ sudo apt-get update -y
 sudo apt-get install -y --no-install-recommends "${DEB_PKGS[@]}"
 sudo apt-get autoclean
 
-git clone --branch 4.2.0 https://github.com/wg/wrk.git /tmp/wrk
+git clone --branch=4.2.0 --depth=1 https://github.com/wg/wrk.git /tmp/wrk
 make -C /tmp/wrk -j
 sudo cp /tmp/wrk/wrk /usr/local/bin/wrk
 rm -rf /tmp/wrk
